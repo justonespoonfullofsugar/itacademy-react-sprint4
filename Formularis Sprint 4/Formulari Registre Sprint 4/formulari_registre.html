@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="formulari_registre.css">
+</head>
+
+<body>
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+    <main>
+        <form action="" class="formulari" id="formulari">
+            <!-- part usuari -->
+            <div class="formulari__grup" id="grup__usuari">
+                <label for="usuari" class="formulari__label">Usuari</label>
+                <div class="formulari__grup-input">
+                    <input type="text" class="formulari__input" name="usuari" id="usuari" placeholder="pepito321">
+                    <i class="formulari__validacio-estat fas fa-times-circle"></i>
+                </div>
+                <p class="formulari__input-error">L'usuari ha de ser de 4 a 16 digits; acceptant tant sols lletres, números o/i guions baixos</p>
+            </div>
+
+            <!-- part nom -->
+            <div class="formulari__grup" id="grup__nom">
+                <label for="nom" class="formulari__label">Nom</label>
+                <div class="formulari__grup-input">
+                    <input type="text" class="formulari__input" name="nom" id="nom" placeholder="Pepito Palotes">
+                    <i class="formulari__validacio-estat fas fa-times-circle"></i>
+                </div>
+                <p class="formulari__input-error">El nom ha de ser de 4 a 16 digits; acceptant tant sols lletres/p>
+            </div>
+
+            <!-- part contrasenya -->
+            <div class="formulari__grup" id="grup__password">
+                <label for="password" class="formulari__label">Contrasenya(*)</label>
+                <div class="formulari__grup-input">
+                    <input type="password" class="formulari__input" name="password" id="password">
+                    <i class="formulari__validacio-estat fas fa-times-circle"></i>
+                </div>
+                <p class="formulari__input-error" id="password-error">La contrasenya ha de ser de 4 a 16 digits; acceptant tant sols lletres, números o/i guions baixos</p>
+            </div>
+
+            <!-- part contrasenya 2 -->
+            <div class="formulari__grup" id="grup__password">
+                <label for="password2" class="formulari__label">Repetir contrasenya(*)</label>
+                <div class="formulari__grup-input">
+                    <input type="password" class="formulari__input" name="password2" id="password2">
+                    <i class="formulari__validacio-estat fas fa-times-circle"></i>
+                </div>
+                <p class="formulari__input-error" id="password2-error">La contrasenya ha de ser exactament igual</p>
+            </div>
+
+            <!-- part correu electronic -->
+            <div class="formulari__grup" id="grup__email">
+                <label for="email" class="formulari__label">Correu electronic(*)</label>
+                <div class="formulari__grup-input">
+                    <input type="email" class="formulari__input" name="email" id="email" placeholder="correu@correu.com">
+                    <i class="formulari__validacio-estat fas fa-times-circle"></i>
+                </div>
+                <p class="formulari__input-error" id="email-error">El correu electronic tant sols pot contenir lletres, números, punts i guions baixos, amb un @</p>
+            </div>
+
+            <!-- part provincia -->
+            <div class="formulari__grup" id="grup__provincia">
+                <label for="provincia" class="formulari__label">Provincia on resideix</label>
+                <form name="form1" action="" method="get">
+                    <select name="province" onChange="" id="provincia">
+                        <option value=""> Selecciona una provincia </option>
+                        <option value="1">BARCELONA</option>
+                        <option value="2">TARRAGONA</option>
+                        <option value="3">GIRONA</option>
+                        <option value="4">LLEIDA</option>
+                    </select>
+                </form>
+                <p class="formulari__input-error" id="provincia-error">S'ha de sel·leccionar una provincia</p>
+            </div>
+
+            <!-- part telefon -->
+            <div class="formulari__grup" id="grup__telefon">
+                <label for="telefon" class="formulari__label">Telefon</label>
+                <div class="formulari__grup-input">
+                    <input type="telefon" class="formulari__input" name="telefon" id="telefon" placeholder="123456789">
+                    <i class="formulari__validacio-estat fas fa-times-circle"></i>
+                </div>
+                <p class="formulari__input-error">El telefon ha de ser de 9 digits, tant sols pot contenir números</p>
+            </div>
+
+            <!-- part condicions -->
+            <div class="formulari__grup" id="grup__campsObligatoris">
+               <p>(*)Son camps obligatoris.</p>
+            </div>
+            
+            <div class="formulari__grup" id="grup__condicions">
+                <label class="formulari__label">
+                    <input class="formulari__checkbox" type="checkbox" name="termes" id="termes">
+                    Accepto els termes i condicions
+                </label>
+            </div>
+
+            <div class="formulari__missatge formulari__missatge-error" id="formulari__missatge">
+                <p><i class="fa fa-exclamation-circle"></i><b>Error:</b>Si us plau, s'ha d'omplir correctament el formulari.</p>
+            </div>
+
+            <div class="formulari__grup formulari__grup-btn-enviar">
+                <button type="button" class="formulari__btn" id="enviar">Enviar</button>
+                <p class="formulari__missatge formulari__missatge-correcte" id="formulari__missatge-correcte">Formulari enviar correctament</p>
+            </div>
+            
+        </form>
+
+    </main>
+
+    <script src="formulari_registre.js"></script> 
+        
+</body>
+</html>
