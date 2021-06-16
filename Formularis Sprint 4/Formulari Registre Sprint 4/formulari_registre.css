@@ -1,0 +1,159 @@
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: aliceblue;
+}
+
+main {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+
+.formulari{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.formulari__label{
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.formulari__grup-input{
+    position: relative;
+}
+
+.formulari__input{
+    width: 100%;
+    background-color: aquamarine;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    transition: .3s ease all;
+}
+
+.formulari__input:focus{
+    border: 3px solid blue;
+    outline: none;
+    box-shadow: 3px 0px 30px rgb(167, 165, 165, 0.4);
+}
+
+.formulari__input-error{
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formulari__input-error-actiu {
+    display: block;
+    text-emphasis-color: red;
+}
+
+.formulari__validacio-estat{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formulari__checkbox{
+    margin-right: 10px;
+}
+
+.formulari__grup-condicions,
+.formulari__missatge,
+.formulari__grup-btn-enviar{
+    grid: span 2;
+}
+
+.formulari__missatge{
+    height: 45px;
+    line-height: 45px;
+    display: none;
+    padding: 0 15px;
+    border-radius: 3px;
+}
+
+.formulari__missatge-error{
+    background: red;
+}
+
+.formulari__missatge-correcte{
+    background: rgb(143, 238, 143);
+}
+.formulari__missatge-actiu {
+    display: block;
+}
+
+.formulari__missatge p{
+    margin: 0;
+}
+
+.formulari__grup-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulari__btn {
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.formulari__btn:hover {
+    box-shadow: 3px 0px 30px rgb(167, 165, 165, 1);
+}
+
+.formulari__missatge-exit{
+    font-size: 14px;
+    color: rgb(133, 241, 10);
+    display: none;
+}
+
+.formulari__missatge-exit-actiu {
+    display: block;
+}
+
+.formulari__grup-correcte .formulari__validacio-estat{
+    color:rgb(133, 241, 10);
+    opacity: 1;
+}
+
+.formulari__grup-incorrecte .formulari__label{
+    color:rgb(241, 10, 10);
+}
+
+.formulari__grup-incorrecte .formulari__validacio-estat{
+    color:rgb(241, 10, 10);
+    opacity: 1;
+}
+
+.formulari__grup-incorrecte .formulari__input{
+    border: 3px solid rgb(241, 10, 10);
+}
+
+@media screen and (max-width: 800px){
+    .formulari {
+        grid-template-columns: 1fr;
+    }
+    .formulari__grup-condicions,
+    .formulari__missatge,
+    .formulari__grup-btn-enviar{
+        grid-column: 1;
+    }
+}
